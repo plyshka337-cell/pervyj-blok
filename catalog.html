@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог — Первый Блок</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__main">ПЕРВЫЙ<span class="logo__accent">БЛОК</span></span>
+                <span class="logo__sub">Официальный дилер заводов</span>
+            </a>
+            <a href="tel:+79935455125" class="header__phone">+7 993 545-51-25</a>
+            <a href="index.html" class="btn btn--primary">← На главную</a>
+        </div>
+    </header>
+
+    <!-- КАТАЛОГ МАРКЕТПЛЕЙС -->
+    <section class="catalog">
+        <div class="container">
+            <h2 class="section-title">Каталог стройматериалов</h2>
+            <p class="section-subtitle">Выберите категорию слева — товары справа</p>
+            <div class="catalog__layout">
+                <aside class="catalog__sidebar" id="catalogSidebar"></aside>
+                <div class="catalog__main" id="catalogGrid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div><h4>Первый Блок</h4><p>Официальный дилер заводов</p></div>
+            <div><h4>Контакты</h4><a href="tel:+79935455125">+7 993 545-51-25</a></div>
+        </div>
+        <div class="footer__bottom">© 2026 ООО «Первый Блок»</div>
+    </footer>
+
+    <script src="js/catalog.js"></script>
+</body>
+</html>
