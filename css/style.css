@@ -13,6 +13,40 @@
     --font: 'Montserrat', sans-serif;
 }
 
+/* ==================== ТЁМНАЯ ТЕМА ==================== */
+body.dark-theme {
+    --dark: #1a1a2e;
+    --white: #16213e;
+    --accent: #e94560;
+    --accent-hover: #c23152;
+    --yellow: #FFB700;
+    --porevit: #d1d5db;
+    --porablok: #60a5fa;
+    --insi: #f87171;
+    --gray-bg: #0f3460;
+    --gray-text: #a0aec0;
+    background: #1a1a2e;
+    color: #e2e8f0;
+}
+/* ==================== КНОПКА ТЕМЫ ==================== */
+.theme-toggle {
+    background: none;
+    border: 1px solid #e5e7eb;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+    font-family: var(--font);
+}
+.theme-toggle:hover {
+    background: var(--gray-bg);
+}
+body.dark-theme .theme-toggle {
+    border-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
 /* ==================== RESET ==================== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }

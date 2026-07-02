@@ -130,3 +130,24 @@ document.addEventListener('click', (e) => {
 });
 
 console.log('✅ Первый Блок — сайт готов. Фильтры, калькулятор, заявка работают.');
+
+// ==================== ТЁМНАЯ ТЕМА ====================
+const themeToggle = document.getElementById('themeToggle');
+
+// Проверяем сохранена ли тема
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-theme');
+    themeToggle.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+    
+    if (document.body.classList.contains('dark-theme')) {
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+    }
+});
