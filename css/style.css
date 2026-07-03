@@ -44,6 +44,9 @@ body.dark-theme .calculator__box { background: #0f172a; border-color: #334155; }
 body.dark-theme .calculator__field label { color: #e2e8f0; }
 body.dark-theme .calculator__field input,
 body.dark-theme .calculator__field select { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark-theme .calculator__result { background: #1e293b !important; color: #e2e8f0; border: 1px solid #334155; }
+body.dark-theme .calculator__field input,
+body.dark-theme .calculator__field select { background: #1e293b; color: #e2e8f0; border-color: #334155; }
 body.dark-theme .form-section { background: #0f172a; }
 body.dark-theme .form input,
 body.dark-theme .form textarea { background: #1e293b; border-color: #334155; color: #e2e8f0; }
@@ -68,6 +71,11 @@ body.dark-theme .filter-btn { background: #1e293b; border-color: #334155; color:
 body.dark-theme .filter-btn.active { background: #60a5fa; color: #fff; }
 body.dark-theme .theme-toggle { border-color: #334155; color: #e2e8f0; }
 body.dark-theme .theme-toggle:hover { background: #334155; }
+body.dark-theme input[type="number"]::-webkit-inner-spin-button,
+body.dark-theme input[type="number"]::-webkit-outer-spin-button {
+    filter: invert(1);
+}
+
 
 /* ==================== КНОПКА ТЕМЫ ==================== */
 .theme-toggle {
