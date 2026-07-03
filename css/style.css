@@ -15,19 +15,60 @@
 
 /* ==================== ТЁМНАЯ ТЕМА ==================== */
 body.dark-theme {
-    --dark: #1a1a2e;
-    --white: #16213e;
-    --accent: #e94560;
-    --accent-hover: #c23152;
-    --yellow: #FFB700;
-    --porevit: #d1d5db;
-    --porablok: #60a5fa;
-    --insi: #f87171;
-    --gray-bg: #0f3460;
-    --gray-text: #a0aec0;
-    background: #1a1a2e;
+    --dark: #0f172a;
+    --white: #1e293b;
+    --accent: #60a5fa;
+    --accent-hover: #3b82f6;
+    --yellow: #f59e0b;
+    --gray-bg: #1e293b;
+    --gray-text: #94a3b8;
+    background: #0f172a;
     color: #e2e8f0;
 }
+
+body.dark-theme .header { background: #1e293b; box-shadow: 0 2px 15px rgba(0,0,0,0.3); }
+body.dark-theme .header__phone { color: #e2e8f0; }
+body.dark-theme .logo { color: #e2e8f0; }
+body.dark-theme .top-bar { background: #020617; }
+body.dark-theme .categories { background: #1e293b; }
+body.dark-theme .category-card { background: #0f172a; border-color: #334155; }
+body.dark-theme .category-card__title { color: #e2e8f0; }
+body.dark-theme .catalog { background: #0f172a; }
+body.dark-theme .product-card { background: #1e293b; border-color: #334155; }
+body.dark-theme .product-card__title { color: #e2e8f0; }
+body.dark-theme .product-card__location { color: #94a3b8; }
+body.dark-theme .product-card__spec { background: #0f172a; }
+body.dark-theme .product-card__price { color: #e2e8f0; }
+body.dark-theme .calculator { background: #1e293b; }
+body.dark-theme .calculator__box { background: #0f172a; border-color: #334155; }
+body.dark-theme .calculator__field label { color: #e2e8f0; }
+body.dark-theme .calculator__field input,
+body.dark-theme .calculator__field select { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark-theme .form-section { background: #0f172a; }
+body.dark-theme .form input,
+body.dark-theme .form textarea { background: #1e293b; border-color: #334155; color: #e2e8f0; }
+body.dark-theme .reviews { background: #1e293b; }
+body.dark-theme .review-card { background: #0f172a; border-color: #334155; }
+body.dark-theme .review-card__text { color: #94a3b8; }
+body.dark-theme .review-card__author { color: #e2e8f0; }
+body.dark-theme .reviews__avito { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+body.dark-theme .footer { background: #020617; }
+body.dark-theme .about { background: #0f172a; }
+body.dark-theme .about__text { color: #e2e8f0; }
+body.dark-theme .about__text p { color: #94a3b8; }
+body.dark-theme .about__stat { background: #1e293b; border-color: #334155; }
+body.dark-theme .about__contacts { background: #1e293b; border-color: #334155; }
+body.dark-theme .about__contacts p { color: #94a3b8; }
+body.dark-theme .about__phones a { background: #0f172a; border-color: #334155; color: #e2e8f0; }
+body.dark-theme .section-title { color: #e2e8f0; }
+body.dark-theme .section-subtitle { color: #94a3b8; }
+body.dark-theme .catalog__cat-btn { background: #1e293b; border-color: #334155; color: #94a3b8; }
+body.dark-theme .catalog__cat-btn.active { background: #60a5fa; color: #fff; }
+body.dark-theme .filter-btn { background: #1e293b; border-color: #334155; color: #94a3b8; }
+body.dark-theme .filter-btn.active { background: #60a5fa; color: #fff; }
+body.dark-theme .theme-toggle { border-color: #334155; color: #e2e8f0; }
+body.dark-theme .theme-toggle:hover { background: #334155; }
+
 /* ==================== КНОПКА ТЕМЫ ==================== */
 .theme-toggle {
     background: none;
@@ -36,16 +77,11 @@ body.dark-theme {
     cursor: pointer;
     padding: 6px 10px;
     border-radius: 8px;
-    transition: 0.2s;
     font-family: var(--font);
+    transition: 0.2s;
+    line-height: 1;
 }
-.theme-toggle:hover {
-    background: var(--gray-bg);
-}
-body.dark-theme .theme-toggle {
-    border-color: rgba(255,255,255,0.2);
-    color: #fff;
-}
+.theme-toggle:hover { background: #f3f4f6; }
 
 /* ==================== RESET ==================== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -55,6 +91,9 @@ body { font-family: var(--font); color: #1a1a1a; background: #f5f5f5; line-heigh
 a { color: inherit; text-decoration: none; }
 .section-title { text-align: center; font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 800; margin-bottom: 0.5rem; color: #1a1a1a; }
 .section-subtitle { text-align: center; color: var(--gray-text); margin-bottom: 2.5rem; font-size: 0.95rem; }
+section[id] { scroll-margin-top: 80px; }
+
+
 
 /* ==================== КНОПКИ ==================== */
 .btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-family: var(--font); cursor: pointer; border: none; transition: 0.2s; white-space: nowrap; }
@@ -191,3 +230,4 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 480px) {
     .categories__grid { grid-template-columns: 1fr; }
 }
+.btn--sm { padding: 8px 16px; font-size: 0.82rem; }
