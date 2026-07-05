@@ -6,7 +6,7 @@
     <title>Первый Блок — газобетон, кирпич, кровля | Официальный дилер</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=block" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,22 +28,36 @@
     </div>
 
     <!-- ==================== HEADER ==================== -->
-    <header class="header">
-        <div class="container header__inner">
-            <a href="index.html" class="logo">
-                <span class="logo__main">ПЕРВЫЙ<span class="logo__accent">БЛОК</span></span>
-                <span class="logo__sub">Официальный дилер заводов</span>
-            </a>
-            <a href="tel:+79935455125" class="header__phone">+7 993 545-51-25</a>
-            <div class="header__messengers">
-                <a href="#" class="header__messenger header__messenger--vk">VK</a>
-                <a href="#" class="header__messenger header__messenger--wa">WA</a>
-                <a href="#" class="header__messenger header__messenger--tg">TG</a>
-            </div>
-            <a href="#categories" class="btn btn--primary">Смотреть цены</a>
-            <button class="theme-toggle" id="themeToggle" title="Тёмная тема">🌙</button>
+
+   <header class="header">
+    <div class="container header__inner">
+        <div class="burger-wrapper">
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+        <span></span><span></span><span></span>
+    </button>
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="about.html">О нас</a>
+        <a href="delivery.html">Доставка</a>
+        <a href="how-to-build.html">Как строить</a>
+        <a href="promo.html">Акции</a>
+    </nav>
+</div>
+        <a href="index.html" class="logo">
+            <span class="logo__main">ПЕРВЫЙ<span class="logo__accent">БЛОК</span></span>
+            <span class="logo__sub">Официальный дилер заводов</span>
+        </a>
+        <a href="tel:+79935455125" class="header__phone">+7 993 545-51-25</a>
+        <div class="header__messengers">
+            <a href="#" class="header__messenger header__messenger--vk">VK</a>
+            <a href="#" class="header__messenger header__messenger--wa">WA</a>
+            <a href="#" class="header__messenger header__messenger--tg">TG</a>
         </div>
-    </header>
+        <button class="theme-toggle" id="themeToggle" title="Тёмная тема">🌙</button>
+        <a href="#categories" class="btn btn--primary">Смотреть цены</a>
+    </div >
+</header>
 
     <!-- ==================== HERO ==================== -->
     <section class="hero">
@@ -77,8 +91,69 @@
         </div>
     </section>
 
-    <!-- ==================== ABOUT ==================== -->
-    <section class="about">
+    <!-- ==================== ГАЗОБЛОК (3 КАРТОЧКИ) ==================== -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Газобетонные блоки — цены</h2>
+            <p class="section-subtitle">Цена за штуку и за м³. Актуально на июнь 2026.</p>
+            <div class="catalog__grid">
+                <!-- Поревит -->
+                <div class="product-card product-card--porevit">
+                    <span class="product-card__badge product-card__badge--d500">D500</span>
+                    <div class="product-card__factory">Поревит</div>
+                    <div class="product-card__location">Тюмень</div>
+                    <div class="product-card__specs">
+                        <div class="product-card__spec"><span class="product-card__spec-label">Размер</span><span class="product-card__spec-value">625×200×250</span></div>
+                        <div class="product-card__spec"><span class="product-card__spec-label">Объём</span><span class="product-card__spec-value">0,0313 м³</span></div>
+                    </div>
+                    <div class="product-card__price-row">
+                        <div>
+                            <div class="product-card__price">135 ₽</div>
+                            <div class="product-card__price-m3">4 300 ₽/м³</div>
+                        </div>
+                        <a href="catalog.html" class="btn btn--primary btn--sm">В каталог →</a>
+                    </div>
+                </div>
+                <!-- Пораблок -->
+                <div class="product-card product-card--porablok">
+                    <span class="product-card__badge product-card__badge--d500">D500</span>
+                    <div class="product-card__factory">Пораблок</div>
+                    <div class="product-card__location">Курган</div>
+                    <div class="product-card__specs">
+                        <div class="product-card__spec"><span class="product-card__spec-label">Размер</span><span class="product-card__spec-value">625×200×250</span></div>
+                        <div class="product-card__spec"><span class="product-card__spec-label">Объём</span><span class="product-card__spec-value">0,0313 м³</span></div>
+                    </div>
+                    <div class="product-card__price-row">
+                        <div>
+                            <div class="product-card__price">120 ₽</div>
+                            <div class="product-card__price-m3">3 850 ₽/м³</div>
+                        </div>
+                        <a href="catalog.html" class="btn btn--primary btn--sm">В каталог →</a>
+                    </div>
+                </div>
+                <!-- Инси -->
+                <div class="product-card product-card--insi">
+                    <span class="product-card__badge product-card__badge--d500">D500</span>
+                    <div class="product-card__factory">Инси</div>
+                    <div class="product-card__location">Зауральск</div>
+                    <div class="product-card__specs">
+                        <div class="product-card__spec"><span class="product-card__spec-label">Размер</span><span class="product-card__spec-value">625×200×250</span></div>
+                        <div class="product-card__spec"><span class="product-card__spec-label">Объём</span><span class="product-card__spec-value">0,0313 м³</span></div>
+                    </div>
+                    <div class="product-card__price-row">
+                        <div>
+                            <div class="product-card__price">141 ₽</div>
+                            <div class="product-card__price-m3">4 500 ₽/м³</div>
+                        </div>
+                        <a href="catalog.html" class="btn btn--primary btn--sm">В каталог →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== О КОМПАНИИ ==================== -->
+    <section class="categories">
         <div class="container about__grid">
             <div class="about__text">
                 <h2>О компании «Первый Блок»</h2>
@@ -107,112 +182,23 @@
         </div>
     </section>
 
-
-    <!-- ==================== КАТЕГОРИИ ==================== -->
-    <section class="categories" id="categories">
+    <!-- ==================== КАТЕГОРИИ (8 ШТУК) ==================== -->
+    <section class="about" id="categories">
         <div class="container">
             <h2 class="section-title">Всё для стройки</h2>
             <p class="section-subtitle">Выберите категорию</p>
             <div class="categories__grid">
-                <a href="catalog.html?cat=gazobeton" class="category-card">
-                    <div class="category-card__icon">🧱</div>
-                    <div class="category-card__title">Газобетонные блоки</div>
-                </a>
-                <a href="catalog.html?cat=kirpich-ryad" class="category-card">
-                    <div class="category-card__icon">🧱</div>
-                    <div class="category-card__title">Кирпич рядовой</div>
-                </a>
-                <a href="catalog.html?cat=kirpich-lic" class="category-card">
-                    <div class="category-card__icon">🧱</div>
-                    <div class="category-card__title">Кирпич лицевой</div>
-                </a>
-                <a href="catalog.html?cat=peremichki" class="category-card">
-                    <div class="category-card__icon">🏗️</div>
-                    <div class="category-card__title">Перемычки</div>
-                </a>
-                <a href="catalog.html?cat=krovlya" class="category-card">
-                    <div class="category-card__icon">🏠</div>
-                    <div class="category-card__title">Кровля</div>
-                </a>
-                <a href="catalog.html?cat=plitka" class="category-card">
-                    <div class="category-card__icon">🧱</div>
-                    <div class="category-card__title">Тротуарная плитка</div>
-                </a>
-                <a href="catalog.html?cat=cement" class="category-card">
-                    <div class="category-card__icon">🪨</div>
-                    <div class="category-card__title">Цемент</div>
-                </a>
-                <a href="catalog.html?cat=smesi" class="category-card">
-                    <div class="category-card__icon">🎨</div>
-                    <div class="category-card__title">Смеси для фасадов</div>
-                </a>
+                <a href="catalog.html?cat=gazobeton" class="category-card"><div class="category-card__icon">🧱</div><div class="category-card__title">Газобетонные блоки</div></a>
+                <a href="catalog.html?cat=kirpich-ryad" class="category-card"><div class="category-card__icon">🧱</div><div class="category-card__title">Кирпич рядовой</div></a>
+                <a href="catalog.html?cat=kirpich-lic" class="category-card"><div class="category-card__icon">🧱</div><div class="category-card__title">Кирпич лицевой</div></a>
+                <a href="catalog.html?cat=peremichki" class="category-card"><div class="category-card__icon">🏗️</div><div class="category-card__title">Перемычки</div></a>
+                <a href="catalog.html?cat=krovlya" class="category-card"><div class="category-card__icon">🏠</div><div class="category-card__title">Кровля</div></a>
+                <a href="catalog.html?cat=plitka" class="category-card"><div class="category-card__icon">🧱</div><div class="category-card__title">Тротуарная плитка</div></a>
+                <a href="catalog.html?cat=cement" class="category-card"><div class="category-card__icon">🪨</div><div class="category-card__title">Цемент</div></a>
+                <a href="catalog.html?cat=smesi" class="category-card"><div class="category-card__icon">🎨</div><div class="category-card__title">Смеси для фасадов</div></a>
             </div>
         </div>
     </section>
-
-<!-- ==================== КАТЕГОРИИ Газоблок==================== -->
-<section class="catalog" id="catalog">
-        <div class="container">
-            <h2 class="section-title">Газобетонные блоки — цены</h2>
-            <p class="section-subtitle">Цена за штуку и за м³. Актуально на июнь 2026.</p>
-            <div class="catalog__grid">
-                <!-- Поревит -->
-                <div class="product-card product-card--porevit">
-                    <span class="product-card__badge product-card__badge--d500">D500</span>
-                    <div class="product-card__factory">Поревит</div>
-                    <div class="product-card__location">Тюмень</div>
-                    <div class="product-card__specs">
-                        <div class="product-card__spec"><span class="product-card__spec-label">Размер</span><span class="product-card__spec-value">625×200×250</span></div>
-                        <div class="product-card__spec"><span class="product-card__spec-label">Объём</span><span class="product-card__spec-value">0,0313 м³</span></div>
-                    </div>
-                    <div class="product-card__price-row">
-                        <div>
-                            <div class="product-card__price">135 ₽</div>
-                            <div class="product-card__price-m3">4 300 ₽/м³</div>
-                        </div>
-                        <a href="catalog.html" class="btn btn--primary btn--sm">В каталог →</a>
-                    </div>
-                </div>
-
-                <!-- Пораблок -->
-                <div class="product-card product-card--porablok">
-                    <span class="product-card__badge product-card__badge--d500">D500</span>
-                    <div class="product-card__factory">Пораблок</div>
-                    <div class="product-card__location">Курган</div>
-                    <div class="product-card__specs">
-                        <div class="product-card__spec"><span class="product-card__spec-label">Размер</span><span class="product-card__spec-value">625×200×250</span></div>
-                        <div class="product-card__spec"><span class="product-card__spec-label">Объём</span><span class="product-card__spec-value">0,0313 м³</span></div>
-                    </div>
-                    <div class="product-card__price-row">
-                        <div>
-                            <div class="product-card__price">120 ₽</div>
-                            <div class="product-card__price-m3">3 850 ₽/м³</div>
-                        </div>
-                        <a href="catalog.html" class="btn btn--primary btn--sm">В каталог →</a>
-                    </div>
-                </div>
-
-                <!-- Инси -->
-                <div class="product-card product-card--insi">
-                    <span class="product-card__badge product-card__badge--d500">D500</span>
-                    <div class="product-card__factory">Инси</div>
-                    <div class="product-card__location">Зауральск</div>
-                    <div class="product-card__specs">
-                        <div class="product-card__spec"><span class="product-card__spec-label">Размер</span><span class="product-card__spec-value">625×200×250</span></div>
-                        <div class="product-card__spec"><span class="product-card__spec-label">Объём</span><span class="product-card__spec-value">0,0313 м³</span></div>
-                    </div>
-                    <div class="product-card__price-row">
-                        <div>
-                            <div class="product-card__price">141 ₽</div>
-                            <div class="product-card__price-m3">4 500 ₽/м³</div>
-                        </div>
-                        <a href="catalog.html" class="btn btn--primary btn--sm">В каталог →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- ==================== КАЛЬКУЛЯТОР ==================== -->
     <section class="calculator" id="calculator">

@@ -143,5 +143,13 @@ if (themeToggle) {
     });
 }
 
+// ==================== БУРГЕР ====================
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (burgerBtn && mobileMenu) {
+    burgerBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+}
 
 console.log('✅ Первый Блок — сайт готов. Фильтры, калькулятор, заявка работают.');
