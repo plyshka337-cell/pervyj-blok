@@ -83,7 +83,8 @@ if (calcBtn) {
         const length = parseFloat(document.getElementById('calcLength').value);
         const height = parseFloat(document.getElementById('calcHeight').value);
         const width = parseInt(document.getElementById('calcWidth').value);
-        const pricePerM3 = parseFloat(document.getElementById('calcPrice').value);
+        const factorySelect = document.getElementById('calcFactory');
+        const pricePerM3 = parseFloat(factorySelect.value);
         const resultDiv = document.getElementById('calcResult');
         if (!length || !height || !pricePerM3) {
             resultDiv.className = 'calculator__result show';

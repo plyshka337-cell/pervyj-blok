@@ -5,9 +5,9 @@
     --accent: #0091FF;
     --accent-hover: #0077dd;
     --yellow: #FFB700;
-    --porevit: #d1d5db;
+    --porevit: #dc2626;
     --porablok: #2563eb;
-    --insi: #dc2626;
+    --insi: #d1d5db;
     --gray-bg: #f8fafc;
     --gray-text: #6b7280;
     --font: 'Montserrat', sans-serif;
@@ -86,6 +86,9 @@ body.dark-theme .product-card__title { color: #e2e8f0; }
 body.dark-theme .product-card__location { color: #94a3b8; }
 body.dark-theme .product-card__spec { background: #0f172a; }
 body.dark-theme .product-card__price { color: #e2e8f0; }
+body.dark-theme .product-card--porevit { border-top-color: #ef4444; }
+body.dark-theme .product-card--porablok { border-top-color: #60a5fa; }
+body.dark-theme .product-card--insi { border-top-color: #d1d5db; }
 body.dark-theme .calculator { background: #1e293b; }
 body.dark-theme .calculator__box { background: #0f172a; border-color: #334155; }
 body.dark-theme .calculator__field label { color: #e2e8f0; }
@@ -93,9 +96,7 @@ body.dark-theme .calculator__field input,
 body.dark-theme .calculator__field select { background: #1e293b; border-color: #334155; color: #e2e8f0; }
 body.dark-theme .calculator__result.show { background: #1e293b !important; color: #e2e8f0; border: 1px solid #334155; }
 body.dark-theme .calculator__field input[type="number"]::-webkit-inner-spin-button,
-body.dark-theme .calculator__field input[type="number"]::-webkit-outer-spin-button {
-    filter: invert(1);
-}
+body.dark-theme .calculator__field input[type="number"]::-webkit-outer-spin-button {filter: invert(1);}
 body.dark-theme .form-section { background: #0f172a; }
 body.dark-theme .form input,
 body.dark-theme .form textarea { background: #1e293b; border-color: #334155; color: #e2e8f0; }
@@ -135,7 +136,11 @@ body.dark-theme div[style*="background:#eff6ff"],
 body.dark-theme div[style*="background: #eff6ff"] { background: #1e3a5f !important; }
 body.dark-theme div[style*="background:linear-gradient"] { background: #1e293b !important; border-color: #334155 !important; }
 body.dark-theme div[style*="border-left:4px"] { border-left-color: var(--accent) !important; }
-
+body.dark-theme .certificates { background: #1e293b; }
+body.dark-theme .cert-card { background: #0f172a; border-color: #334155; }
+body.dark-theme .cert-card p { color: #94a3b8; }
+body.dark-theme .about__map iframe { filter: grayscale(0.3); }
+body.dark-theme .review-card__avatar { background: #334155; }
 
 /* ==================== КНОПКА ТЕМЫ ==================== */
 .theme-toggle {
@@ -189,24 +194,66 @@ section[id] { scroll-margin-top: 80px; }
 .header__messengers { display: flex; gap: 6px; }
 .header__messenger { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: 700; color: #fff; }
 .header__messenger--vk { background: #0077ff; }
-.header__messenger--wa { background: #25d366; }
-.header__messenger--tg { background: #2aabee; }
+.header__messenger--max {
+    background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.6rem;
+}
 .header__messenger:hover { transform: scale(1.1); }
 
 /* ==================== HERO ==================== */
-.hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%); padding: 60px 0 50px; text-align: center; position: relative; overflow: hidden; }
+.hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 40%, #0f172a 100%); padding: 60px 0 50px; text-align: center; position: relative; visible; hidden; }
 .hero::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,145,255,0.12) 0%, transparent 70%); border-radius: 50%; }
 .hero__content { position: relative; z-index: 2; }
 .hero__tagline { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); padding: 6px 18px; border-radius: 30px; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.9); margin-bottom: 1.5rem; }
 .hero__factories { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; color: #fff; font-weight: 700; }
 .hero__dot { width: 22px; height: 22px; border-radius: 6px; display: inline-block; margin-right: 0.5rem; vertical-align: middle; }
-.hero__dot--white { background: #fff; border: 3px solid #d1d5db; box-shadow: 0 0 25px rgba(255,255,255,0.6); }
-.hero__dot--blue { background: var(--porablok); box-shadow: 0 0 25px rgba(37,99,235,0.8); }
-.hero__dot--red { background: var(--insi); box-shadow: 0 0 25px rgba(220,38,38,0.8); }
+.hero__dot--white { background: #fff; border: 3px solid #d1d5db; box-shadow: 0 0 25px rgba(255,255,255,0.6); } /* Инси */
+.hero__dot--blue { background: #2563eb; box-shadow: 0 0 25px rgba(37,99,235,0.8); } /* Пораблок */
+.hero__dot--red { background: #dc2626; box-shadow: 0 0 25px rgba(220,38,38,0.8); } /* Поревит */
 .hero__title { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; line-height: 1.2; color: #fff; margin-bottom: 0.8rem; }
 .hero__price { display: block; color: var(--yellow); font-size: 1.2em; margin-top: 5px; }
 .hero__subtitle { font-size: 1rem; color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 1.5rem; }
 .hero__features { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; color: rgba(255,255,255,0.9); font-weight: 600; font-size: 0.9rem; }
+
+/* ==================== Анимация кнопки узнать мою цену ==================== */
+.hero__price-cta {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+.hero__price-btn {
+    position: relative;
+}
+.hero__price-tooltip {
+    position: absolute;
+    top: 100%; /* Появляется строго под кнопкой */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 12px; /* Небольшой отступ от кнопки */
+    background: #ffffff;
+    color: #1a1a1a;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    pointer-events: none;
+    min-width: 320px; /* Широкая плашка */
+    border: 1px solid #e5e7eb;
+}
+.hero__price-btn:hover .hero__price-tooltip {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 16px; /* Лёгкое смещение вниз при появлении */
+}
 
 /* ==================== ABOUT ==================== */
 .about { background: #fff; padding: 60px 0; }
@@ -253,6 +300,8 @@ section[id] { scroll-margin-top: 80px; }
 .product-card__price-row { display: flex; align-items: flex-end; justify-content: space-between; margin-top: auto; gap: 0.5rem; }
 .product-card__price { font-weight: 800; font-size: 1.3rem; }
 .product-card__price-m3 { font-size: 0.73rem; color: var(--gray-text); }
+.product-card__factory { font-size: 1.3rem; font-weight: 800; }
+.product-card__price { font-size: 1.6rem; font-weight: 900; }
 
 /* ==================== CALCULATOR ==================== */
 .calculator { background: var(--gray-bg); padding: 60px 0; }
@@ -272,7 +321,11 @@ section[id] { scroll-margin-top: 80px; }
 
 /* ==================== REVIEWS ==================== */
 .reviews { background: var(--gray-bg); padding: 60px 0; }
-.reviews__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
 .review-card { background: #fff; border-radius: 16px; padding: 1.5rem; border: 1px solid #e5e7eb; }
 .review-card__stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 0.6rem; }
 .review-card__text { font-size: 0.9rem; color: #4b5563; line-height: 1.6; margin-bottom: 1rem; font-style: italic; }
@@ -299,3 +352,19 @@ section[id] { scroll-margin-top: 80px; }
     .categories__grid { grid-template-columns: 1fr; }
 }
 .btn--sm { padding: 8px 16px; font-size: 0.82rem; }
+
+
+/* Сертификаты */
+.certificates { background: var(--gray-bg); padding: 60px 0; }
+.certificates__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1.5rem; }
+.cert-card { background: #fff; border-radius: 12px; overflow: hidden; text-align: center; border: 
+    1px solid #e5e7eb; padding: 1rem; }
+.cert-card img { width: 100%; height: auto; object-fit: contain; border-radius: 8px; margin-bottom: 0.5rem; }
+.cert-card p { font-size: 0.85rem; color: #6b7280; }
+
+/* Карта */
+.about__map { margin-top: 1.5rem; }
+
+/* Аватарки */
+.review-card__avatar { width: 40px; height: 40px; background: var(--gray-bg); border-radius: 50%; 
+    display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 0.5rem; }
